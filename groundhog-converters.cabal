@@ -18,7 +18,11 @@ Library
                         Database.Groundhog.Converters.Internal
 --  Other-Modules:        
   Build-Depends:        base >= 4 && < 5
--- Test Suite Code
+                      , aeson
+                      , bytestring
+                      , containers
+                      , bimap 
+                      
                       , lens
                       , regex-genex
                       , tasty                      
