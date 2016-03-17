@@ -25,6 +25,9 @@ Library
                       
                       , lens
                       , regex-genex
+                      , groundhog
+                      , groundhog-sqlite
+                      , groundhog-th                      
                       , tasty                      
                       , tasty-golden
                       , tasty-hunit
