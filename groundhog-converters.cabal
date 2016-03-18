@@ -21,18 +21,7 @@ Library
                       , aeson
                       , bytestring
                       , containers
-                      , bimap 
-                      
-                      , lens
-                      , regex-genex
-                      , groundhog
-                      , groundhog-sqlite
-                      , groundhog-th                      
-                      , tasty                      
-                      , tasty-golden
-                      , tasty-hunit
-                      , tasty-quickcheck
-                      , QuickCheck
+                      , bimap                       
 
 Test-Suite spec
   Type:                 exitcode-stdio-1.0
@@ -44,13 +33,9 @@ Test-Suite spec
   Build-Depends:        base
                       , groundhog-converters
                       , groundhog
-                      , regex-genex
                       , tasty                      
-                      , tasty-golden
                       , tasty-hunit
                       , tasty-quickcheck
-                      , QuickCheck
-                      , groundhog
                       , groundhog-sqlite
                       , groundhog-th    
                       , containers                      
