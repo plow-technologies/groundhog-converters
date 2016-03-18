@@ -1,10 +1,40 @@
-{-# LANGUAGE TemplateHaskell #-}
 {-# LANGUAGE DataKinds         #-}
 {-# LANGUAGE FlexibleInstances #-}
 {-# LANGUAGE GADTs             #-}
 {-# LANGUAGE TypeFamilies      #-}
-{-# LANGUAGE QuasiQuotes #-}
-module Database.Groundhog.Converters where
+
+
+{- |
+Module      : Database.Groundhog.Converters
+Description : Common Converters for groundhog.
+Copyright   : Plow Technologies LLC
+License     : MIT License
+Maintainer  : Scott Murphy
+
+
+This is a library for creating composable converters between datatypes for the purpose
+of inserting into a groundhog database.
+
+The idea is to get from a representation a, which does not have a type class 'PersistEntity a'
+to one 'b', which has that type class defined.
+
+This allows lightweight types libraries to coexist with nice database representations.
+
+| -}
+module Database.Groundhog.Converters ( makeConverter
+                                     , flipConverter
+                                     , composeConverter
+                                     , fmapConverter
+                                     , bicomposeConverter
+                                     , firstConverter
+                                     , secondConverter
+                                     , jsonConverter
+                                     , integerConverter
+                                     , mapConverter
+                                     , bimapConverter
+                                     , intMapConverter
+                                     , Converter
+                                     ) where
 import           Control.Arrow             (first, second, (***))
 import Data.Aeson (ToJSON,FromJSON,encode,eitherDecode)
 import Data.Int (Int64)
