@@ -21,6 +21,8 @@ to one 'b', which has that type class defined.
 This allows lightweight types libraries to coexist with nice database representations.
 
 | -}
+
+
 module Database.Groundhog.Converters ( makeConverter
                                      , flipConverter
                                      , composeConverter
