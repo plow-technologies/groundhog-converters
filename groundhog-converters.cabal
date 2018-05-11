@@ -1,11 +1,10 @@
 Name:                   groundhog-converters
-Version:                0.1.0
+Version:                0.2.0
 Author:                 Scott Murphy <scottmurphy09@gmail.com>
 Maintainer:             Scott Murphy <scottmurphy09@gmail.com>
 License:                BSD3
 License-File:           LICENSE
-Synopsis:               Extended Converter Library for groundhog embedded types
-Tags:                   Database, Groundhog                        
+Synopsis:               Extended Converter Library for groundhog embedded types         
 Description:
             Groundhog allows a programmer to represent a haskell datatype by an equivalent type that is more suited for Database work.
             groundhog-converters provides a selection of common converters that have proved useful.
@@ -31,6 +30,8 @@ Test-Suite spec
                       , test
   Ghc-Options:          -Wall
   Main-Is:              Spec.hs
+  Other-Modules:        Database.Groundhog.Converters
+                      , Database.Groundhog.ConvertersSpec
   Build-Depends:        base
                       , groundhog-converters
                       , groundhog
